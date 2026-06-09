@@ -10,7 +10,7 @@
 
 ### Orodha ya Collaborators:
 
-1. abuu94
+1. [abuu94](https://github.com/abuu94)
 2. xx
 3. xx
 4. xx
