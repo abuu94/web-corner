@@ -8,15 +8,11 @@
 - Collaboration
 
 
-### Orodha ya Collaborators:
-
-1. [abuu94](https://github.com/abuu94)
-2. xx
-3. xx
-4. xx
-5. xx
-6. xx
-7. xx
-8. xx
-9. xx
+### Test 1  , Deadline 30/6/2026
+1. Tengeneza Webpage moja kuhusu project moja
+2. Design vizuri kwa kutumia HTML tags mbalimbali
+3. Tumia CSS katika hio hio webpage
+4. Save webpage hio kwa jina lako mfano  abubakar.html
+5. Push project ndani ya hii repository
+   
    
