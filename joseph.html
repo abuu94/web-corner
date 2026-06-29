@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="sw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber Security Edu</title>
+    <link rel="stylesheet" href="courses.css">
+    <link rel="stylesheet" href="footer.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+</head>
+
+<body class="dark-theme">
+
+<div class="glow-orb"></div>
+
+<header class="navbar-glass">
+    <div class="nav-left">
+        <a href="#" class="cinematic-home">
+            <span class="material-icons-round">home</span>
+        </a>
+        <div class="logo">CYBER SECURITY <span>EDU</span></div>
+    </div>
+
+    <div class="nav-center">
+        <div class="search-box-modern">
+            <span class="material-icons-round">search</span>
+            <!-- placeholder itabadilika kupitia JS -->
+            <input type="text" id="mainSearch" data-key="searchPlaceholder">
+        </div>
+    </div>
+
+    <div class="nav-right">
+        <!-- Kitufe cha Lugha -->
+        <button id="langBtn" class="ai-spark-btn" onclick="toggleLanguage()" style="margin-right: 10px; cursor: pointer;">
+            EN
+        </button>
+        
+        <button class="ai-spark-btn">
+            <span class="material-icons-round">auto_awesome</span>
+            <span data-key="aiChatBtn">AI CHAT</span>
+        </button>
+    </div>
+</header>
+
+<main class="main-content">
+    <div class="page-title-area">
+        <h1 class="reveal-title" data-key="pageTitle">MAKTABA YA KOZI</h1>
+        <p data-key="pageSubtitle">Jifunze Usalama wa Mtandao kwa njia rahisi</p>
+    </div>
+
+    <!-- Hapa kadi zitajijaza zenyewe kutoka kwenye JS -->
+    <div id="courseGrid" class="course-grid"></div>
+</main>
+
+<script src="courses.js"></script>
+
+</body>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+<footer class="pro-footer">
+    <div class="footer-overlay"></div>
+
+    <div class="footer-container">
+        <div class="footer-grid">
+
+            <div class="footer-section about-box">
+                <h4 class="section-title">
+                    <i class="fa-solid fa-user-shield"></i> About us
+                </h4>
+
+                <p class="about-text">
+                    Karibu kwenye <span class="highlight">Cyber Security Edu</span>."Karibu kwenye jukwaa linalotoa elimu ya usalama wa mtandao bure. Lengo letu ni kumsaidia kila mtu kupata uelewa na uzoefu wa kutosha ili kujikinga na uovu pamoja na mbinu zote za wadukuzi mtandaoni."
+                </p>
+
+                <div class="social-icons">
+                    <a href="#" class="social-link google"><i class="fa-brands fa-google"></i></a>
+                    <a href="#" class="social-link facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="social-link x-twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="https://wa.me/255796558687" class="social-link whatsapp"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h4 class="section-title">
+                    <i class="fa-solid fa-map-location-dot"></i> LOCATION
+                </h4>
+
+                <div class="contact-links">
+                    <div class="pro-contact">
+                        <i class="fa-solid fa-location-crosshairs icon-glow"></i>
+                        <span>Zanzibar, Tanzania</span>
+                    </div>
+
+                    <a href="mailto:josephmwashilanga264@gmail.com" class="pro-contact link">
+                        <i class="fa-solid fa-envelope-open-text icon-glow"></i>
+                        <span>josephmwashilanga264@gmail.com</span>
+                    </a>
+
+                    <a href="tel:+255796558687" class="pro-contact link">
+                        <i class="fa-solid fa-phone-volume icon-glow"></i>
+                        <span>+255 796 558 687</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h4 class="section-title">
+                    <i class="fa-solid fa-terminal"></i> USER EXPERIENCE
+                </h4>
+
+                <form action="#" class="pro-form">
+                    <input type="email" class="pro-input" placeholder="Your Security Email">
+                    <textarea class="pro-input" placeholder="Type your encrypted message here..."></textarea>
+
+                    <button type="submit" class="pro-btn">
+                     SEND <i class="fa-solid fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+
+        </div>
+
+        <div class="footer-divider"></div>
+
+        <div class="footer-bottom">
+            <p>© 2026 <span class="gold-text">CYBER SECURITY EDU</span> | ENCRYPTED CONNECTIONS</p>
+
+            <div class="footer-badges">
+    
+            </div>
+        </div>
+    </div>
+</footer>
+</html>
