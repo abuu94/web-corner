@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="sw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kujifunza Web Design</title>
+    <style>
+        *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#f1f5f9;
+    color:#111;
+}
+
+
+header{
+    background:#0f172a;
+    color:white;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 70px;
+}
+
+header h1{
+    font-size:28px;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+}
+
+nav ul li{
+    margin-left:25px;
+}
+
+nav ul li a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+nav ul li a:hover{
+    color:#38bdf8;
+}
+
+
+.hero{
+    background:linear-gradient(135deg,#3b82f6,#06b6d4);
+    color:white;
+    text-align:center;
+    padding:80px 20px;
+}
+
+.hero h2{
+    font-size:40px;
+    margin-bottom:15px;
+}
+
+.hero p{
+    margin-bottom:25px;
+}
+
+.hero button{
+    padding:12px 30px;
+    border:none;
+    border-radius:25px;
+    background:white;
+    color:#0f172a;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.hero button:hover{
+    transform:scale(1.05);
+}
+
+
+.cards{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    margin:40px;
+}
+
+.card{
+    background:white;
+    padding:25px;
+    width:250px;
+    text-align:center;
+    border-radius:12px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+
+.about{
+    background:white;
+    margin:30px auto;
+    width:80%;
+    padding:30px;
+    border-radius:10px;
+    text-align:center;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+
+.contact{
+    background:white;
+    width:80%;
+    margin:30px auto;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+.contact input,
+.contact textarea{
+    width:100%;
+    padding:12px;
+    margin:10px 0;
+    border:1px solid #ccc;
+    border-radius:8px;
+}
+
+.contact button{
+    background:#0f172a;
+    color:white;
+    padding:12px 25px;
+    border:none;
+    border-radius:20px;
+}
+
+
+footer{
+    background:#0f172a;
+    color:white;
+    text-align:center;
+    padding:15px;
+    margin-top:40px;
+}
+
+
+@media(max-width:768px){
+    header{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    nav ul{
+        flex-direction:column;
+        margin-top:10px;
+    }
+
+    nav ul li{
+        margin:10px 0;
+    }
+
+    .cards{
+        flex-direction:column;
+        align-items:center;
+    }
+}
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Kujifunza Web Design</h1>
+
+    <nav>
+        <ul>
+            <li><a href="#">Nyumbani</a></li>
+            <li><a href="#">HTML</a></li>
+            <li><a href="#">CSS</a></li>
+            <li><a href="#">Projects</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="hero">
+    <h2>Tengeneza Website Yako ya Kwanza</h2>
+    <p>Jifunze HTML na CSS kwa njia rahisi na ya vitendo.</p>
+    <button>Anza Sasa</button>
+</section>
+
+<section class="cards">
+
+    <div class="card">
+        <h3>HTML</h3>
+        <p>Msingi wa kila website huanzia hapa.</p>
+    </div>
+
+    <div class="card">
+        <h3>CSS</h3>
+        <p>Hupamba na kufanya website ionekane nzuri.</p>
+    </div>
+
+    <div class="card">
+        <h3>Projects</h3>
+        <p>Fanya mazoezi kwa kutengeneza website zako.</p>
+    </div>
+
+</section>
+
+<section class="about">
+    <h2>Kuhusu Hii Website</h2>
+    <p>
+        Hii ni website ya kujifunza web design kwa wanaoanza.
+        Inakusaidia kuelewa HTML na CSS kwa vitendo.
+    </p>
+</section>
+
+<section class="contact">
+    <h2>Mawasiliano</h2>
+
+    <form>
+        <input type="text" placeholder="Jina lako">
+        <input type="email" placeholder="Email yako">
+        <textarea placeholder="Ujumbe wako"></textarea>
+        <button>Tuma</button>
+    </form>
+</section>
+
+<footer>
+    <p>© 2026 Kujifunza Web Design</p>
+</footer>
+
+</body>
+</html>
