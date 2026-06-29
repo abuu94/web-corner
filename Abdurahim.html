@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gaming Fun Arena</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#050510;
+    color:white;
+}
+
+/* HEADER */
+header{
+    background:linear-gradient(90deg,#ff0055,#7000ff);
+    text-align:center;
+    padding:45px 20px;
+}
+
+header h1{
+    font-size:42px;
+    letter-spacing:1px;
+}
+
+header p{
+    margin-top:10px;
+    opacity:0.9;
+}
+
+/* NAV */
+nav{
+    background:#0d0d1a;
+    text-align:center;
+    padding:15px;
+    border-bottom:1px solid #222;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:15px;
+    font-weight:bold;
+}
+
+nav a:hover{
+    color:#ff0055;
+}
+
+/* HERO */
+.hero{
+    display:flex;
+    flex-wrap:wrap;
+    align-items:center;
+    justify-content:center;
+    width:90%;
+    margin:40px auto;
+    gap:30px;
+}
+
+.hero-text{
+    flex:1;
+}
+
+.hero-text h2{
+    font-size:36px;
+    color:#ff0055;
+}
+
+.hero-text p{
+    margin-top:15px;
+    line-height:1.8;
+    opacity:0.9;
+}
+
+button{
+    margin-top:20px;
+    background:#7000ff;
+    color:white;
+    border:none;
+    padding:12px 25px;
+    border-radius:8px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+button:hover{
+    background:#ff0055;
+}
+
+/* CARDS */
+.container{
+    width:90%;
+    margin:auto;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+    margin:40px 0;
+}
+
+.card{
+    background:#0d0d1a;
+    padding:20px;
+    border-radius:12px;
+    border:1px solid #222;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    border-color:#ff0055;
+}
+
+.card h3{
+    color:#ff0055;
+    margin-bottom:10px;
+}
+
+/* TABLE */
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:20px;
+    background:#0d0d1a;
+}
+
+th{
+    background:#7000ff;
+    padding:12px;
+}
+
+td{
+    padding:12px;
+    border:1px solid #222;
+    text-align:center;
+}
+
+/* FOOTER */
+footer{
+    background:#0d0d1a;
+    text-align:center;
+    padding:20px;
+    margin-top:40px;
+    border-top:1px solid #222;
+}
+</style>
+
+</head>
+<body>
+
+<header>
+<h1>Gaming Fun Arena</h1>
+<p>The Ultimate Competitive Gaming Platform</p>
+</header>
+
+<nav>
+<a href="#">Home</a>
+<a href="#">Tournaments</a>
+<a href="#">Teams</a>
+<a href="#">Leaderboard</a>
+<a href="#">Store</a>
+</nav>
+
+<section class="hero">
+
+<div class="hero-text">
+<h2>Enter The Arena</h2>
+
+<p>
+Gaming Fun Arena is a next generation gaming platform where players
+compete in tournaments, build teams, and climb global rankings.
+</p>
+
+<button>Join Tournament</button>
+</div>
+
+<img src="https://images.unsplash.com/photo-1552820728-8b83bb6b773f?w=900" alt="Gaming" style="flex:1;width:100%;border-radius:12px;">
+
+</section>
+
+<div class="container">
+
+<h2 style="text-align:center;color:#ff0055;">Featured Games</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>Battle Royale</h3>
+<p>Survive and become the last player standing.</p>
+</div>
+
+<div class="card">
+<h3>E football</h3>
+<p>Football gaming match challenges.</p>
+</div>
+
+<div class="card">
+<h3>FPS Combat</h3>
+<p>Team based shooting battles and missions.</p>
+</div>
+
+<div class="card">
+<h3>Strategy War</h3>
+<p>Plan, build and conquer enemy territories.</p>
+</div>
+
+</div>
+
+<h2 style="text-align:center;color:#ff0055;">Top Players</h2>
+
+<table>
+<tr>
+<th>Rank</th>
+<th>Player</th>
+<th>Game</th>
+<th>Points</th>
+</tr>
+
+<tr>
+<td>1</td>
+<td>Abdujr</td>
+<td>Battle Royale</td>
+<td>12000</td>
+</tr>
+
+<tr>
+<td>2</td>
+<td>McCall</td>
+<td>FPS Combat</td>
+<td>11500</td>
+</tr>
+
+<tr>
+<td>3</td>
+<td>kante_7</td>
+<td>E football</td>
+<td>11000</td>
+</tr>
+
+</table>
+
+</div>
+
+<footer>
+<p>Gaming Fun Arena</p>
+</footer>
+
+</body>
+</html>
