@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gym & Fitness</title>
+
+<style>
+*{
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #0f0f0f, #1c1c1c);
+    color: #fff;
+}
+
+/* HEADER */
+header {
+    background: linear-gradient(90deg, #111, #1f1f1f);
+    text-align: center;
+    padding: 40px 20px;
+    border-bottom: 3px solid #ff2e2e;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+}
+
+header p {
+    margin-top: 10px;
+    color: #ccc;
+}
+
+/* MAIN CONTAINER */
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 40px auto;
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* ABOUT SECTION */
+.about {
+    flex: 1;
+    min-width: 300px;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 25px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.about h2 {
+    color: #ff3b3b;
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+}
+
+.about p {
+    line-height: 1.7;
+    color: #ddd;
+    margin-bottom: 15px;
+}
+
+/* FORM BOX */
+.form-box {
+    flex: 1;
+    min-width: 300px;
+    background: rgba(255, 255, 255, 0.08);
+    padding: 25px;
+    border-radius: 15px;
+    border: 1px solid rgba(255,255,255,0.1);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+.form-box h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #ff3b3b;
+}
+
+/* LABELS */
+.form-box label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: #eee;
+}
+
+/* INPUTS */
+.form-box input,
+.form-box select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    background: #1f1f1f;
+    color: #fff;
+    transition: 0.3s;
+}
+
+.form-box input:focus,
+.form-box select:focus {
+    border: 1px solid #ff3b3b;
+    box-shadow: 0 0 8px #ff3b3b;
+}
+
+/* BUTTON */
+button {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(90deg, #ff2e2e, #ff5e5e);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(255, 46, 46, 0.4);
+}
+
+/* FOOTER */
+footer {
+    background: #0d0d0d;
+    color: #aaa;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+    border-top: 1px solid #222;
+}
+</style>
+
+</head>
+<body>
+
+<header>
+    <h1>Gym & Fitness Center</h1>
+    <p>Train Hard • Stay Healthy • Live Strong</p>
+</header>
+
+<div class="container">
+
+    <section class="about">
+        <h2>About Our Gym</h2>
+        <p>
+            Welcome to Gym & Fitness Center. We provide modern equipment,
+            professional trainers, and personalized fitness programs to
+            help you achieve your health goals.
+        </p>
+
+        <p>
+            Join today and enjoy strength training, cardio workouts,
+            yoga classes, and nutrition guidance in a friendly environment.
+        </p>
+    </section>
+
+    <section class="form-box">
+        <h2>Membership Form</h2>
+
+        <form>
+
+            <label>Full Name</label>
+            <input type="text" placeholder="Enter your name" required>
+
+            <label>Email</label>
+            <input type="email" placeholder="Enter your email" required>
+
+            <label>Phone Number</label>
+            <input type="tel" placeholder="Enter your phone number" required>
+
+            <label>Membership Plan</label>
+            <select required>
+                <option>Select Plan</option>
+                <option>Monthly</option>
+                <option>Quarterly</option>
+                <option>Yearly</option>
+            </select>
+
+            <label>Age</label>
+            <input type="number" placeholder="Enter your age">
+
+            <button type="submit">Join Now</button>
+
+        </form>
+
+    </section>
+
+</div>
+
+<footer>
+    <p>&copy; 2026 Gym & Fitness Center. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
