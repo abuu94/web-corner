@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computer Training Center</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background: #f4f4f4;
+        }
+        
+        header {
+            background: #06fce7;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        nav {
+            background: #051525;
+            padding: 15px;
+            text-align: center;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+            padding: 10px 20px;
+            display: inline-block;
+        }
+        
+        nav a:hover {
+            background: #2c3e50;
+            border-radius: 5px;
+        }
+        
+        .hero {
+            background-image: url('picha.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+        
+        .hero p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+        }
+        
+        .btn {
+            background: #09dcf8;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 20px;
+        }
+        
+        .btn:hover {
+            background: #09dcf8;
+        }
+        
+        .courses {
+            padding: 60px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .courses h2 {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #0a81f8;
+        }
+        
+        .course-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+            gap: 30px;
+        }
+        
+        .course-card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            overflow: hidden;
+        }
+        
+        .course-card-header {
+            background: #0d4ef3;
+            padding: 20px;
+        }
+        
+        .course-card-header h3 {
+            color: white;
+            margin: 0;
+        }
+        
+        .course-card-body {
+            padding: 30px;
+        }
+        
+        .course-card-body p {
+            color: #7f8c8d;
+            margin-bottom: 15px;
+        }
+        
+        .course-card-body .duration {
+            color: #1608e2;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+        
+        .course-card-body .price {
+            color: #e74c3c;
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        
+        .join-btn {
+            background: #0a4aeb;
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+        }
+        
+        .join-btn:hover {
+            background: #1553f0;
+        }
+        
+        .about {
+            background: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        
+        .about h2 {
+            color: hsl(249, 83%, 49%);
+            margin-bottom: 20px;
+        }
+        
+        .about p {
+            max-width: 800px;
+            margin: 0 auto;
+            color: #7f8c8d;
+        }
+        
+        .contact {
+            padding: 60px 20px;
+            text-align: center;
+            background: #0ff0f8;
+            color: white;
+        }
+        
+        .contact h2 {
+            margin-bottom: 20px;
+        }
+        
+        .contact p {
+            margin: 10px 0;
+        }
+        
+        .register {
+            padding: 60px 20px;
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .register h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #0a81f8;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #2c3e50;
+            font-weight: bold;
+        }
+        
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #0a4aeb;
+        }
+        
+        .submit-btn {
+            background: #0a4aeb;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+        }
+        
+        .submit-btn:hover {
+            background: #1553f0;
+        }
+        
+        footer {
+            background: #1a252f;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Computer Training Center</h1>
+        <p>Learn Computer Skills</p>
+    </header>
+    
+    <nav>
+        <a href="#">Home</a>
+        <a href="#courses">Courses</a>
+        <a href="#about">About Us</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    
+    <section class="hero">
+       
+        <p>Learn computer skills from experts</p>
+        <a href="#courses" class="btn">View Courses</a>
+    </section>
+    
+    <section class="courses" id="courses">
+        <h2>Our Courses</h2>
+        <div class="course-grid">
+            <div class="course-card">
+                <div class="course-card-header">
+                    <h3>Computer Basics</h3>
+                </div>
+                <div class="course-card-body">
+                    <p>Learn basic computer usage, Windows, and Microsoft Office.</p>
+                    <div class="duration">Duration: 1 Month</div>
+                    <div class="price">TSh 150,000</div>
+                    <a href="#register" class="join-btn">Join Now</a>
+                </div>
+            </div>
+            <div class="course-card">
+                <div class="course-card-header">
+                    <h3>Web Development</h3>
+                </div>
+                <div class="course-card-body">
+                    <p>Learn to design websites using HTML, CSS, JavaScript, and PHP.</p>
+                    <div class="duration">Duration: 3 Months</div>
+                    <div class="price">TSh 400,000</div>
+                    <a href="#register" class="join-btn">Join Now</a>
+                </div>
+            </div>
+            <div class="course-card">
+                <div class="course-card-header">
+                    <h3>Graphic Design</h3>
+                </div>
+                <div class="course-card-body">
+                    <p>Learn graphic design using Photoshop and Illustrator.</p>
+                    <div class="duration">Duration: 2 Months</div>
+                    <div class="price">TSh 350,000</div>
+                    <a href="#register" class="join-btn">Join Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="about" id="about">
+        <h2>About Us</h2>
+        <p>We are dedicated to providing high-quality computer training for everyone. Our instructors are experts with years of experience in the technology sector.</p>
+    </section>
+    
+    <section class="contact" id="contact">
+        <h2>Contact</h2>
+        <p>Phone: +255 719 039  710</p>
+        <p>Email: info@trainingcenter.co.tz</p>
+        <p>Address: Jendele Zanzibar, Tanzania</p>
+    </section>
+    
+    <section class="register" id="register">
+        <h2>Registration Form</h2>
+        <form>
+            <div class="form-group">
+                <label>Full Name</label>
+                <input type="text" placeholder="Enter your full name" required>
+            </div>
+            <div class="form-group">
+                <label>Email</label>
+                <input type="email" placeholder="Enter your email" required>
+            </div>
+            <div class="form-group">
+                <label>Phone</label>
+                <input type="tel" placeholder="Enter your phone number" required>
+            </div>
+            <div class="form-group">
+                <label>Select Course</label>
+                <select required>
+                    <option value="">Choose a course</option>
+                    <option value="basics">Computer Basics</option>
+                    <option value="web">Web Development</option>
+                    <option value="design">Graphic Design</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Message (Optional)</label>
+                <textarea rows="4" placeholder="Any additional information"></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Submit Registration</button>
+        </form>
+    </section>
+    
+    <footer>
+        <p>&copy; 2026 Computer Training Center. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
