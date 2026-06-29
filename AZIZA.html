@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="sw">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gari kutoka Zanzibar</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Segoe UI,sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#f4f6f9;
+    color:#333;
+}
+
+/* Header */
+
+header{
+    position:fixed;
+    width:100%;
+    background:#111;
+    padding:18px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    z-index:999;
+}
+
+.logo{
+    color:#ff4500;
+    font-size:28px;
+    font-weight:bold;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:30px;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#ff4500;
+}
+
+/* Hero */
+
+.hero{
+    height:100vh;
+    background:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+    url("https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1600&q=80");
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    color:white;
+}
+
+.hero h1{
+    font-size:60px;
+}
+
+.hero p{
+    margin:20px 0;
+    font-size:20px;
+}
+
+.btn{
+    display:inline-block;
+    padding:15px 35px;
+    background:#ff4500;
+    color:white;
+    text-decoration:none;
+    border-radius:6px;
+    transition:.3s;
+}
+
+.btn:hover{
+    background:#d73700;
+}
+
+/* Sections */
+
+section{
+    padding:90px 8%;
+}
+
+.title{
+    text-align:center;
+    font-size:40px;
+    margin-bottom:40px;
+}
+
+/* Cars */
+
+.cars{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:30px;
+}
+
+.car{
+    background:white;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 5px 20px rgba(0,0,0,.1);
+    transition:.3s;
+}
+
+.car:hover{
+    transform:translateY(-8px);
+}
+
+.car img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.info{
+    padding:20px;
+}
+
+.price{
+    color:#ff4500;
+    font-size:24px;
+    font-weight:bold;
+    margin:15px 0;
+}
+
+/* About */
+
+.about{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+    align-items:center;
+}
+
+.about img{
+    width:100%;
+    border-radius:15px;
+}
+
+.about h2{
+    margin-bottom:20px;
+}
+
+/* Services */
+
+.services{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.box{
+    background:white;
+    padding:30px;
+    border-radius:12px;
+    text-align:center;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+/* Contact */
+
+form{
+    max-width:700px;
+    margin:auto;
+}
+
+input,textarea{
+    width:100%;
+    padding:15px;
+    margin:12px 0;
+    border:1px solid #ccc;
+    border-radius:8px;
+}
+
+textarea{
+    height:150px;
+}
+
+button{
+    width:100%;
+    padding:15px;
+    border:none;
+    background:#ff4500;
+    color:white;
+    font-size:18px;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+/* Footer */
+
+footer{
+    background:#111;
+    color:white;
+    text-align:center;
+    padding:30px;
+    margin-top:60px;
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+header{
+flex-direction:column;
+}
+
+nav{
+margin-top:15px;
+}
+
+.hero h1{
+font-size:38px;
+}
+
+.about{
+grid-template-columns:1fr;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">GARI</div>
+
+<nav>
+<a href="#">Home</a>
+<a href="#cars">Magari</a>
+<a href="#about">About</a>
+<a href="#contact">Contact</a>
+</nav>
+
+</header>
+
+<section class="hero">
+
+<div>
+
+<h1>Pata Gari la Ndoto Yako</h1>
+
+<p>Magari mapya na yaliyotumika kwa ubora wa hali ya juu.</p>
+
+<a href="#cars" class="btn">Angalia Magari</a>
+
+</div>
+
+</section>
+
+<section id="cars">
+
+<h2 class="title">Magari Yanayopatikana</h2>
+
+<div class="cars">
+
+<div class="car">
+
+<img src="#">
+
+<div class="info">
+
+<h3>Toyota Land Cruiser</h3>
+
+<p>2024 • Automatic • Diesel</p>
+
+<div class="price">$52,000</div>
+
+<a href="#" class="btn">Maelezo</a>
+
+</div>
+
+</div>
+
+<div class="car">
+
+<img src="#">
+
+<div class="info">
+
+<h3>BMW X5</h3>
+
+<p>2023 • Petrol • Automatic</p>
+
+<div class="price">$45,000</div>
+
+<a href="#" class="btn">Maelezo</a>
+
+</div>
+
+</div>
+
+<div class="car">
+
+<img src="#">
+
+<div class="info">
+
+<h3>Mercedes C-Class</h3>
+
+<p>2025 • Hybrid</p>
+
+<div class="price">$61,000</div>
+
+<a href="#" class="btn">Maelezo</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="about">
+
+<div class="about">
+
+<img src="#">
+
+<div>
+
+<h2>Kuhusu Gari</h2>
+
+<p>
+
+Tunauza magari ya kisasa kutoka Japan, Dubai na Ulaya.
+Tunatoa huduma ya usafirishaji, usajili na ushauri wa kununua gari.
+
+</p>
+
+<br>
+
+<a href="#contact" class="btn">Wasiliana Nasi</a>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="title">Huduma Zetu</h2>
+
+<div class="services">
+
+<div class="box">
+<h3>Magari Mapya</h3>
+<p>Magari ya kisasa yenye ubora.</p>
+</div>
+
+<div class="box">
+<h3>Bei Nafuu</h3>
+<p>Bei zinazoshindana sokoni.</p>
+</div>
+
+<div class="box">
+<h3>Delivery</h3>
+<p>Tunakuletea gari popote Tanzania.</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="contact">
+
+<h2 class="title">Wasiliana Nasi</h2>
+
+<form>
+
+<input type="text" placeholder="Jina">
+
+<input type="email" placeholder="Email">
+
+<input type="tel" placeholder="Simu">
+
+<textarea placeholder="Ujumbe"></textarea>
+
+<button>Tuma Ujumbe</button>
+
+</form>
+
+</section>
+
+<footer>
+
+© 2026 GARI Kutoka Zanzibar Tanzania | Designed with HTML5 & CSS
+
+</footer>
+
+</body>
+</html>
