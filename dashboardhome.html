@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="sw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber Security Edu | Pro Portal</title>
+
+    <link rel="stylesheet" href="dashboardhome.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Fira+Code&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="glow-bg"></div>
+
+    <nav class="navbar">
+        <div class="logo">
+            CYBER<span class="highlight">SECURITY</span> EDU
+        </div>
+
+        <ul class="nav-links">
+             <li class="search-wrapper-isolated">
+                <div class="cinematic-search-container" id="searchBox">
+                    <form action="search.php" method="GET" class="search-content-cleaned">
+                        <input type="search" name="q" placeholder="Search..." class="cinematic-input">
+
+                        <button type="button" class="toggle-icon-btn" onclick="toggleCinematicSearch()">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="gold" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="11" cy="11" r="8"></circle>
+                                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+            </li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Courses</a></li>
+            <li><a href="#">Contact us</a></li>
+            <li><button class="btn-premium">Ai chatbot</button></li>
+            
+            <button id="langBtn" class="lang-btn" onclick="toggleLanguage()">SW</button>
+            <li>
+                <div id="profileBtn" class="profile-btn">Sign In</div>
+            </li>
+        </ul>
+    </nav>
+
+    <header class="hero">
+        <div class="badge">Learning Platform</div>
+
+        <h1>
+            Cyber Security edu <br>
+            <span class="gradient-text">Elimu kwa wote</span>
+        </h1>
+
+        <p>
+            Jifunze mbinu za kisasa za ulinzi wa Mtandao kupitia Cyber Security Edu.
+        </p>
+
+        <div class="hero-stats">
+            <span>⚡ 20+ Courses</span>
+            <span>💻 Ai Chatbot</span>
+            <span>🔒 Test</span>
+        </div>
+    </header>
+
+    <div class="fire-wrap">
+        <h2 class="tred">TRENDING ATTACKS</h2>
+    </div>
+
+    <main class="container">
+        <div class="grid">
+            <div class="card reveal">
+                <div class="card-inner">
+                    <div class="icon">📡</div>
+                    <h3>Kuhusu Lipa Namba</h3>
+                    <p>Jifunze jinsi ya kulinda Mtandao wa simu dhidi ya walaghai wa mtandao.</p>
+                    <div class="card-footer">
+                        <span class="price">Bure</span>
+                        <a href="#" class="btn-link">Soma zaidi→</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card reveal">
+                <div class="card-inner">
+                    <div class="icon">💰</div>
+                    <h3>MUAMALA UMEKOSEWA</h3>
+                    <p>Elewa mbinu za Unapokea SMS iliyotengenezwa kitaalamu kufanana na ya M-Pesa au Tigo Pesa inayoonyesha umeingiziwa pesa.</p>
+                    <div class="card-footer">
+                        <span class="price">Bure</span>
+                        <a href="#" class="btn-link">Soma zaidi→</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card reveal">
+                <div class="card-inner">
+                    <div class="icon">📞💬</div>
+                    <h3>UTEKAJI WA WHATSAPP KWA NJIA YA FAKE LINK</h3>
+                    <p>Unapokea simu kutoka kwa mtu anayejifanya "Admin" wa group la WhatsApp au mfanyakazi wa kampuni ya simu..</p>
+                    <div class="card-footer">
+                        <span class="price">Bure</span>
+                        <a href="#" class="btn-link">Soma zaidi →</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card reveal">
+                <div class="card-inner">
+                    <div class="icon">📱</div>
+                    <h3>HUDUMA KWA WATEJA" FEKI</h3>
+                    <p>Matapeli wanatumia namba za kawaida (siyo namba fupi za kampuni) kupiga simu na kujitambulisha kama kitengo cha usalama.</p>
+                    <div class="card-footer">
+                        <span class="price">Bure</span>
+                        <a href="#" class="btn-link">Soma zaidi →</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card reveal">
+                <div class="card-inner">
+                    <div class="icon">🔐</div>
+                    <h3>UTAPELI WA "MAFUNDI SIMU</h3>
+                    <p>Unapeleka simu yako itengenezwe au "kupiga window" (Flash). Fundi mjanja anatumia mwanya huo kuingia kwenye 'Gallery' yako na kuhamisha picha au video zako za faragha kwenda kwenye kompyuta yake bila wewe kujua..</p>
+                    <div class="card-footer">
+                        <span class="price">Bure</span>
+                        <a href="#" class="btn-link">Soma zaidi →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="dashboardhome.js" defer></script>
+
+    <div id="w3DropModal" class="pro-modal-container">
+
+        <button class="pro-close-btn" id="closeModal" aria-label="Close">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <div id="signInBox" class="modal-inner-content">
+            <div class="modal-header">
+                <h2 class="pro-title">Welcome Back</h2>
+                <p class="pro-subtitle">Sign in to continue.</p>
+            </div>
+
+            <div class="pro-social-grid">
+                <div class="pro-social-item">
+                    <img src="https://img.icons8.com/color/48/google-logo.png" alt="Google">
+                </div>
+                <div class="pro-social-item">
+                    <i class="fa-brands fa-facebook-f facebook-blue"></i>
+                </div>
+            </div>
+
+            <div class="pro-divider">
+                <span>Login with email</span>
+            </div>
+
+            <form action="process_login.php" method="POST">
+                <div class="pro-form-group">
+                    <div class="pro-input-wrapper">
+                        <i class="fa-solid fa-user input-icon"></i>
+                        <input type="text" name="user_or_email" placeholder="Username / Email Address" class="pro-input-field" required>
+                    </div>
+                </div>
+
+                <div class="pro-form-group">
+                    <div class="pro-input-wrapper">
+                        <i class="fa-solid fa-lock input-icon"></i>
+                        <input type="password" id="password" name="password" placeholder="Password" class="pro-input-field" required>
+                        <i class="fa-solid fa-eye-slash toggle-eye" id="togglePass"></i>
+                    </div>
+                </div>
+
+                <label class="check-box">
+                    <input type="checkbox" name="remember_me">
+                    <span></span>
+                    Email me with news and updates
+                </label>
+
+                <div class="pro-extra-actions">
+                    <a href="javascript:void(0)" class="pro-link" onclick="toggleView('forgotBox')">
+                        <i class="fa-solid fa-unlock-keyhole"></i> Forgot Password?
+                    </a>
+                </div>
+
+                <button type="submit" class="pro-main-btn">
+                    Sign in <i class="fa-solid fa-arrow-right-to-bracket"></i>
+                </button>
+            </form>
+
+            <div class="pro-footer-link">
+                Don't have an account?
+                <a href="javascript:void(0)" onclick="toggleView('signUpBox')">Create account</a>
+            </div>
+        </div>
+
+        <div id="signUpBox" class="modal-inner-content" style="display:none;">
+            <h2 class="pro-title">Create Account</h2>
+
+            <form action="process_register.php" method="POST">
+                <div class="pro-form-group">
+                    <input type="text" name="full_name" placeholder="Full Name" class="pro-input-field" required>
+                </div>
+
+                <div class="pro-form-group">
+                    <input type="text" name="username" placeholder="Create Username" class="pro-input-field" required>
+                </div>
+
+                <div class="pro-form-group">
+                    <input type="email" name="email" placeholder="Email Address" class="pro-input-field" required>
+                </div>
+
+                <div class="pro-form-group">
+                    <input type="password" name="password" placeholder="Create Password" class="pro-input-field" required>
+                </div>
+
+                <label class="check-box">
+                    <input type="checkbox" name="subscribe_news">
+                    Email me with news and updates
+                </label>
+
+                <button type="submit" class="pro-main-btn">SIGN UP</button>
+            </form>
+
+            <div class="pro-footer-link">
+                <a href="javascript:void(0)" onclick="toggleView('signInBox')">Return to Login</a>
+            </div>
+        </div>
+
+        <div id="forgotBox" class="modal-inner-content" style="display:none;">
+            <h2 class="pro-title">Reset Password</h2>
+            <p class="pro-subtitle">Enter your email to receive reset link</p>
+
+            <form action="process_forgot.php" method="POST">
+                <div class="pro-form-group">
+                    <div class="pro-input-wrapper">
+                        <i class="fa-solid fa-envelope input-icon"></i>
+                        <input type="email" name="reset_email" placeholder="Email Address" class="pro-input-field" required>
+                    </div>
+                </div>
+
+                <button type="submit" class="pro-main-btn">
+                    Send Reset Link
+                </button>
+            </form>
+
+            <div class="pro-footer-link">
+                <a href="javascript:void(0)" onclick="toggleView('signInBox')">Back to Login</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+<footer class="pro-footer">
+    <div class="footer-overlay"></div>
+
+    <div class="footer-container">
+        <div class="footer-grid">
+            <div class="footer-section about-box">
+                <h4 class="section-title">
+                    <i class="fa-solid fa-user-shield"></i> About us
+                </h4>
+                <p class="about-text">
+                    Karibu kwenye <span class="highlight">Cyber Security Edu</span>. "Karibu kwenye jukwaa linalotoa elimu ya usalama wa mtandao bure. Lengo letu ni kumsaidia kila mtu kupata uelewa na uzoefu wa kutosha ili kujikinga na uovu pamoja na mbinu zote za wadukuzi mtandaoni."
+                </p>
+                <div class="social-icons">
+                    <a href="#" class="social-link google"><i class="fa-brands fa-google"></i></a>
+                    <a href="#" class="social-link facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="social-link x-twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="https://wa.me/255796558687" class="social-link whatsapp"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h4 class="section-title">
+                    <i class="fa-solid fa-map-location-dot"></i> LOCATION
+                </h4>
+                <div class="contact-links">
+                    <div class="pro-contact">
+                        <i class="fa-solid fa-location-crosshairs icon-glow"></i>
+                        <span>Zanzibar, Tanzania</span>
+                    </div>
+                    <a href="mailto:josephmwashilanga264@gmail.com" class="pro-contact link">
+                        <i class="fa-solid fa-envelope-open-text icon-glow"></i>
+                        <span>josephmwashilanga264@gmail.com</span>
+                    </a>
+                    <a href="tel:+255796558687" class="pro-contact link">
+                        <i class="fa-solid fa-phone-volume icon-glow"></i>
+                        <span>+255 796 558 687</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h4 class="section-title">
+                    <i class="fa-solid fa-terminal"></i> USER EXPERIENCE
+                </h4>
+                <form action="process_footer_message.php" method="POST" class="pro-form">
+                    <input type="email" name="footer_email" class="pro-input" placeholder="Your Security Email" required>
+                    <textarea name="footer_message" class="pro-input" placeholder="Type your encrypted message here..." required></textarea>
+
+                    <button type="submit" class="pro-btn">
+                        SEND <i class="fa-solid fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <div class="footer-divider"></div>
+
+        <div class="footer-bottom">
+            <p>© 2026 <span class="gold-text">CYBER SECURITY EDU</span> | ENCRYPTED CONNECTIONS</p>
+            <div class="footer-badges">
+                <span class="badge">
+                    <i class="fa-solid fa-shield-check"></i> 
+                </span>
+            </div>
+        </div>
+    </div>
+</footer>
+</html>
