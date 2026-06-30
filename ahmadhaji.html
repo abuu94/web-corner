@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Welding Dashboard</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#f4f6f9;
+}
+
+.header{
+    width:100%;
+    height:70px;
+    background:#0b3d91;
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0 30px;
+}
+
+.header h2{
+    font-size:28px;
+}
+
+.container{
+    display:flex;
+}
+
+.sidebar{
+    width:250px;
+    min-height:100vh;
+    background:#1f2937;
+    color:white;
+}
+
+.sidebar ul{
+    list-style:none;
+    padding-top:20px;
+}
+
+.sidebar ul li{
+    padding:18px 25px;
+    border-bottom:1px solid #374151;
+    cursor:pointer;
+}
+
+.sidebar ul li:hover{
+    background:#0b3d91;
+}
+
+.main{
+    flex:1;
+    padding:30px;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:white;
+    padding:25px;
+    border-radius:10px;
+    box-shadow:0 4px 10px rgba(0,0,0,.1);
+}
+
+.card h3{
+    color:#666;
+    margin-bottom:10px;
+}
+
+.card h1{
+    color:#0b3d91;
+    font-size:40px;
+}
+
+.tables{
+    margin-top:40px;
+    display:grid;
+    grid-template-columns:2fr 1fr;
+    gap:20px;
+}
+
+.box{
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 4px 10px rgba(0,0,0,.1);
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:15px;
+}
+
+table th{
+    background:#0b3d91;
+    color:white;
+    padding:12px;
+}
+
+table td{
+    padding:12px;
+    border-bottom:1px solid #ddd;
+}
+
+.activity{
+    margin-top:15px;
+}
+
+.activity p{
+    padding:10px;
+    border-bottom:1px solid #ddd;
+}
+
+.footer{
+    text-align:center;
+    padding:20px;
+    margin-top:30px;
+    color:#666;
+}
+</style>
+
+</head>
+<body>
+
+<div class="header">
+    <h2>WELDING MANAGEMENT DASHBOARD</h2>
+    <h3>Admin Panel</h3>
+</div>
+
+<div class="container">
+
+<div class="sidebar">
+<ul>
+<li>🏠 Dashboard</li>
+<li>👨‍🏭 Welders</li>
+<li>📂 Projects</li>
+<li>📅 Schedule</li>
+<li>🛠 Equipment</li>
+<li>📦 Materials</li>
+<li>💰 Payments</li>
+<li>📊 Reports</li>
+<li>⚙ Settings</li>
+<li>🚪 Logout</li>
+</ul>
+</div>
+
+<div class="main">
+
+<div class="cards">
+
+<div class="card">
+<h3>Total Welders</h3>
+<h1>58</h1>
+</div>
+
+<div class="card">
+<h3>Active Projects</h3>
+<h1>21</h1>
+</div>
+
+<div class="card">
+<h3>Completed Jobs</h3>
+<h1>145</h1>
+</div>
+
+<div class="card">
+<h3>Monthly Revenue</h3>
+<h1>$12K</h1>
+</div>
+
+</div>
+
+<div class="tables">
+
+<div class="box">
+<h2>Recent Projects</h2>
+
+<table>
+
+<tr>
+<th>Project</th>
+<th>Client</th>
+<th>Status</th>
+</tr>
+
+<tr>
+<td>Steel Gate</td>
+<td>John</td>
+<td>Completed</td>
+</tr>
+
+<tr>
+<td>Warehouse</td>
+<td>ABC Ltd</td>
+<td>Ongoing</td>
+</tr>
+
+<tr>
+<td>Bridge Welding</td>
+<td>Government</td>
+<td>Pending</td>
+</tr>
+
+<tr>
+<td>Window Frames</td>
+<td>Mike</td>
+<td>Completed</td>
+</tr>
+
+</table>
+
+</div>
+
+<div class="box">
+
+<h2>Recent Activity</h2>
+
+<div class="activity">
+<p>✅ New project assigned</p>
+<p>👨‍🏭 Welder added</p>
+<p>🛠 Equipment serviced</p>
+<p>📦 Materials delivered</p>
+<p>💰 Payment received</p>
+<p>📊 Report generated</p>
+</div>
+
+</div>
+
+</div>
+
+<div class="footer">
+© 2026 Welding Management System
+</div>
+
+</div>
+
+</div>
+
+</body>
+</html>
