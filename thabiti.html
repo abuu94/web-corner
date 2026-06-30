@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lost ID Reporting System</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:'Poppins',sans-serif;
+    }
+
+    body{
+      background:linear-gradient(135deg,#0f172a,#1e293b,#2563eb);
+      min-height:100vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      padding:20px;
+    }
+
+    .container{
+      width:100%;
+      max-width:420px;
+      background:rgba(255,255,255,0.08);
+      border:1px solid rgba(255,255,255,0.2);
+      backdrop-filter:blur(15px);
+      border-radius:28px;
+      padding:30px 25px;
+      color:white;
+      box-shadow:0 10px 40px rgba(0,0,0,0.3);
+    }
+
+    .logo{
+      width:90px;
+      height:90px;
+      background:linear-gradient(135deg,#3b82f6,#60a5fa);
+      border-radius:50%;
+      margin:auto;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:40px;
+      box-shadow:0 8px 20px rgba(59,130,246,0.5);
+    }
+
+    h1{
+      text-align:center;
+      margin-top:20px;
+      font-size:28px;
+      font-weight:700;
+    }
+
+    .subtitle{
+      text-align:center;
+      color:#dbeafe;
+      margin-top:8px;
+      font-size:14px;
+    }
+
+    .tabs{
+      display:flex;
+      margin-top:25px;
+      background:rgba(255,255,255,0.1);
+      border-radius:15px;
+      overflow:hidden;
+    }
+
+    .tab{
+      flex:1;
+      text-align:center;
+      padding:12px;
+      cursor:pointer;
+      transition:0.3s;
+      font-weight:600;
+    }
+
+    .active{
+      background:#3b82f6;
+    }
+
+    form{
+      margin-top:25px;
+    }
+
+    .input-box{
+      margin-bottom:18px;
+    }
+
+    .input-box label{
+      display:block;
+      margin-bottom:8px;
+      font-size:14px;
+      color:#dbeafe;
+    }
+
+    .input-box input,
+    .input-box select,
+    .input-box textarea{
+      width:100%;
+      padding:14px;
+      border:none;
+      outline:none;
+      border-radius:14px;
+      background:rgba(255,255,255,0.12);
+      color:white;
+      font-size:15px;
+    }
+
+    .input-box input::placeholder,
+    textarea::placeholder{
+      color:#cbd5e1;
+    }
+
+    textarea{
+      resize:none;
+      height:90px;
+    }
+
+    .btn{
+      width:100%;
+      padding:15px;
+      border:none;
+      border-radius:15px;
+      background:linear-gradient(135deg,#2563eb,#60a5fa);
+      color:white;
+      font-size:16px;
+      font-weight:700;
+      cursor:pointer;
+      transition:0.3s;
+      margin-top:10px;
+    }
+
+    .btn:hover{
+      transform:scale(1.03);
+    }
+
+    .cards{
+      margin-top:25px;
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:15px;
+    }
+
+    .card{
+      background:rgba(255,255,255,0.08);
+      border-radius:18px;
+      padding:18px;
+      text-align:center;
+      border:1px solid rgba(255,255,255,0.15);
+    }
+
+    .card span{
+      font-size:30px;
+      display:block;
+      margin-bottom:10px;
+    }
+
+    .footer{
+      text-align:center;
+      margin-top:25px;
+      font-size:13px;
+      color:#cbd5e1;
+    }
+
+    @media(max-width:480px){
+      h1{
+        font-size:23px;
+      }
+
+      .container{
+        padding:25px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+
+  <div class="logo">🪪</div>
+
+  <h1>Lost ID reporting System</h1>
+  <p class="subtitle">Fast & Smart Lost ID Reporting Platform</p>
+
+  <div class="tabs">
+    <div class="tab active">LOGIN</div>
+    <div class="tab">REGISTER</div>
+  </div>
+
+  <form>
+
+    <div class="input-box">
+      <label>Full Name</label>
+      <input type="text" id="name" placeholder="Enter your full name" required>
+    </div>
+
+    <div class="input-box">
+      <label>Phone Number</label>
+      <input type="tel" id="phone" placeholder="Enter phone number" required>
+    </div>
+
+    <div class="input-box">
+      <label>ID Status</label>
+      <select>
+        <option>Lost ID</option>
+        <option>Found ID</option>
+        <option>Search ID</option>
+      </select>
+    </div>
+
+    <div class="input-box">
+      <label>Description</label>
+      <textarea placeholder="Write details here..."></textarea>
+    </div>
+
+    <button class="btn">Submit Report</button>
+
+  </form>
+
+  <div class="cards">
+
+    <div class="card">
+      <span>📌</span>
+      <h3>Report Lost</h3>
+    </div>
+
+    <div class="card">
+      <span>🔎</span>
+      <h3>Search ID</h3>
+    </div>
+
+    <div class="card">
+      <span>✅</span>
+      <h3>Found ID</h3>
+    </div>
+
+    <div class="card">
+      <span>📩</span>
+      <h3>Feedback</h3>
+    </div>
+
+  </div>
+
+  <div class="footer">
+    © 2026 Thabit Lost ID Reporting System
+  </div>
+
+</div>
+
+<script>
+
+  // Name validation (No Numbers)
+  document.getElementById('name').addEventListener('input', function(e){
+      this.value = this.value.replace(/[0-9]/g,'');
+  });
+
+  // Phone validation (Only Numbers)
+  document.getElementById('phone').addEventListener('input', function(e){
+      this.value = this.value.replace(/[^0-9]/g,'');
+  });
+
+</script>
+
+</body>
+</html>
