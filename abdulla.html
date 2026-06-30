@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online Hall Booking</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f2f2f2;
+        }
+
+        .container {
+            width: 400px;
+            margin: 30px auto;
+            background: white;
+            padding: 20px;
+            border: 1px solid #ccc;
+        }
+
+        h1 {
+            text-align: center;
+            color: darkblue;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin: 8px 0;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background: darkblue;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        table {
+            width: 100%;
+            margin-top: 20px;
+            border-collapse: collapse;
+        }
+
+        table, th, td {
+            border: 1px solid black;
+        }
+
+        th, td {
+            padding: 8px;
+            text-align: center;
+        }
+
+        th {
+            background: darkblue;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Online Hall Booking</h1>
+
+    <h3>Booking Form</h3>
+
+    <input type="text" placeholder="Customer Name">
+
+    <input type="date">
+
+    <select>
+        <option>Select Hall</option>
+        <option>Conference Hall</option>
+        <option>Wedding Hall</option>
+        <option>Meeting Hall</option>
+    </select>
+
+    <input type="number" placeholder="Number of Guests">
+
+    <button>Book Hall</button>
+
+    <h3>Booked Halls</h3>
+
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Hall</th>
+            <th>Date</th>
+        </tr>
+
+        <tr>
+            <td>Ali</td>
+            <td>Wedding Hall</td>
+            <td>15/07/2026</td>
+        </tr>
+
+        <tr>
+            <td>Sara</td>
+            <td>Conference Hall</td>
+            <td>20/07/2026</td>
+        </tr>
+    </table>
+
+</div>
+
+</body>
+</html>
