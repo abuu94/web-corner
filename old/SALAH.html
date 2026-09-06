@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Travel Explorer</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#f4f4f4;
+}
+
+header{
+    background:#0066cc;
+    color:white;
+    text-align:center;
+    padding:30px;
+}
+
+header h1{
+    font-size:40px;
+}
+
+.top-section{
+    display:flex;
+    justify-content:space-between;
+    gap:30px;
+    padding:40px;
+    flex-wrap:wrap;
+}
+
+.intro{
+    flex:1;
+    min-width:300px;
+    background:white;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
+
+.intro h2{
+    color:#0066cc;
+    margin-bottom:15px;
+    font-size:32px;
+}
+
+.intro p{
+    color:#555;
+    line-height:1.8;
+    margin-bottom:25px;
+}
+
+.intro button{
+    background:#0066cc;
+    color:white;
+    border:none;
+    padding:12px 25px;
+    border-radius:30px;
+    cursor:pointer;
+    font-size:16px;
+    transition:.3s;
+}
+
+.intro button:hover{
+    background:#004999;
+}
+
+.booking{
+    flex:1;
+    min-width:300px;
+    background:white;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
+
+.booking h2{
+    text-align:center;
+    color:#0066cc;
+    margin-bottom:20px;
+}
+
+.booking input,
+.booking select{
+    width:100%;
+    padding:12px;
+    margin-bottom:15px;
+    border:1px solid #ccc;
+    border-radius:5px;
+}
+
+.booking input[type="submit"]{
+    background:#0066cc;
+    color:white;
+    border:none;
+    cursor:pointer;
+    font-size:16px;
+}
+
+.booking input[type="submit"]:hover{
+    background:#004999;
+}
+
+.destinations{
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    flex-wrap:wrap;
+    padding:40px;
+}
+
+.box{
+    width:280px;
+    background:white;
+    padding:25px;
+    text-align:center;
+    border-radius:10px;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+    transition:.3s;
+}
+
+.box:hover{
+    transform:translateY(-8px);
+}
+
+.box h3{
+    color:#0066cc;
+    margin-bottom:10px;
+}
+
+.box p{
+    color:#555;
+}
+
+footer{
+    background:#222;
+    color:white;
+    text-align:center;
+    padding:20px;
+    margin-top:30px;
+}
+
+@media(max-width:768px){
+
+.top-section{
+    flex-direction:column;
+    padding:20px;
+}
+
+.destinations{
+    padding:20px;
+}
+
+header h1{
+    font-size:30px;
+}
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+    <h1>Travel Explorer</h1>
+</header>
+
+<div class="top-section">
+
+    <div class="intro">
+        <h2>Explore the World With Us</h2>
+
+        <p>
+            Discover amazing destinations, enjoy unforgettable adventures,
+            and create memories that last a lifetime.
+        </p>
+
+        <button>Explore Tours</button>
+    </div>
+
+    <div class="booking">
+
+        <h2>Book Your Trip</h2>
+
+        <form>
+
+            <input type="text" placeholder="Full Name">
+
+            <input type="email" placeholder="Email Address">
+
+            <select>
+                <option>Select Destination</option>
+                <option>Zanzibar</option>
+                <option>Serengeti</option>
+                <option>Mount Kilimanjaro</option>
+            </select>
+
+            <input type="date">
+
+            <input type="submit" value="Book Now">
+
+        </form>
+
+    </div>
+
+</div>
+
+<section class="destinations">
+
+    <div class="box">
+        <h3>Zanzibar</h3>
+        <p>White sand beaches and crystal-clear ocean.</p>
+    </div>
+
+    <div class="box">
+        <h3>Serengeti</h3>
+        <p>Experience wildlife and the Great Migration.</p>
+    </div>
+
+    <div class="box">
+        <h3>Mount Kilimanjaro</h3>
+        <p>Climb Africa's highest mountain and enjoy breathtaking views.</p>
+    </div>
+
+</section>
+
+<footer>
+    <p>&copy; 2026 Travel Explorer | All Rights Reserved</p>
+</footer>
+
+</body>
+</html>

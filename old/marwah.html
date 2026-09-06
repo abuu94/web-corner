@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>EcoTrack - Environmental Monitoring Project</title>
+    <style>
+        /* ---- RESET & BASE ---- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f0f4f8;
+            color: #2d3748;
+            line-height: 1.6;
+        }
+
+        /* ---- HEADER ---- */
+        header {
+            background: linear-gradient(135deg, #1a365d 0%, #2b6cb0 100%);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            border-bottom: 5px solid #48bb78;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* ---- NAVIGATION ---- */
+        nav {
+            background: #2d3748;
+            padding: 15px 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 25px;
+            margin: 0 5px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            background: #48bb78;
+            transform: translateY(-2px);
+        }
+
+        /* ---- MAIN CONTAINER ---- */
+        .container {
+            max-width: 1100px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        /* ---- PROJECT OVERVIEW ---- */
+        .project-overview {
+            background: white;
+            border-radius: 12px;
+            padding: 35px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            border-left: 6px solid #48bb78;
+        }
+
+        .project-overview h2 {
+            color: #1a365d;
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+
+        .project-overview p {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+        }
+
+        .project-badge {
+            display: inline-block;
+            background: #48bb78;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+
+        /* ---- FEATURES SECTION ---- */
+        .features-section {
+            background: white;
+            border-radius: 12px;
+            padding: 35px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+
+        .features-section h2 {
+            color: #1a365d;
+            font-size: 2rem;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-top: 20px;
+        }
+
+        .feature-card {
+            background: #f7fafc;
+            padding: 25px;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid #e2e8f0;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+
+        .feature-card h3 {
+            color: #2b6cb0;
+            margin-bottom: 10px;
+        }
+
+        .feature-card p {
+            color: #4a5568;
+            font-size: 0.95rem;
+        }
+
+        /* ---- TEAM SECTION ---- */
+        .team-section {
+            background: white;
+            border-radius: 12px;
+            padding: 35px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+
+        .team-section h2 {
+            color: #1a365d;
+            font-size: 2rem;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .team-member {
+            background: #f7fafc;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            border: 1px solid #e2e8f0;
+        }
+
+        .team-member .avatar {
+            width: 80px;
+            height: 80px;
+            background: #2b6cb0;
+            border-radius: 50%;
+            margin: 0 auto 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            color: white;
+        }
+
+        .team-member h4 {
+            color: #1a365d;
+        }
+
+        .team-member .role {
+            color: #718096;
+            font-size: 0.9rem;
+        }
+
+        /* ----- TIMELINE -----*/
+        .timeline-section {
+            background: white;
+            border-radius: 12px;
+            padding: 35px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+
+        .timeline-section h2 {
+            color: #1a365d;
+            font-size: 2rem;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .timeline-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        .timeline-table th {
+            background: #2b6cb0;
+            color: white;
+            padding: 12px;
+            text-align: left;
+        }
+
+        .timeline-table td {
+            padding: 12px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .timeline-table tr:hover {
+            background: #f7fafc;
+        }
+
+        .timeline-table .status-complete {
+            color: #48bb78;
+            font-weight: bold;
+        }
+
+        .timeline-table .status-progress {
+            color: #f59546;
+            font-weight: bold;
+        }
+
+        .timeline-table .status-pending {
+            color: #fc8181;
+            font-weight: bold;
+        }
+
+        /* ----- CONTACT FORM ------*/
+        .contact-section {
+            background: white;
+            border-radius: 12px;
+            padding: 35px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+
+        .contact-section h2 {
+            color: #1a365d;
+            font-size: 2rem;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 5px;
+            color: #2d3748;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #48bb78;
+        }
+
+        .form-group textarea {
+            height: 120px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            background: #48bb78;
+            color: white;
+            padding: 14px 40px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.2s ease;
+            width: 100%;
+        }
+
+        .submit-btn:hover {
+            background: #38a169;
+            transform: scale(1.02);
+        }
+
+        /* -----FOOTER----- */
+        footer {
+            background: #1a365d;
+            color: #cbd5e0;
+            padding: 30px 20px;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        footer .footer-links {
+            margin: 15px 0;
+        }
+
+        footer .footer-links a {
+            color: #a0aec0;
+            text-decoration: none;
+            margin: 0 15px;
+            transition: color 0.3s ease;
+        }
+
+        footer .footer-links a:hover {
+            color: #48bb78;
+        }
+
+        footer .copyright {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+    /*-----RESPONSIVE -----*/
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            nav a {
+                display: inline-block;
+                padding: 8px 15px;
+                margin: 3px;
+                font-size: 0.9rem;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .team-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .container {
+                padding: 0 15px;
+            }
+
+            .project-overview,
+            .features-section,
+            .team-section,
+            .timeline-section,
+            .contact-section {
+                padding: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+
+            header h1 {
+                font-size: 1.5rem;
+            }
+
+            .timeline-table {
+                font-size: 0.85rem;
+            }
+
+            .timeline-table th,
+            .timeline-table td {
+                padding: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+     <!-- HEADER  -->
+    <header>
+        <h1> EcoTrack</h1>
+        <p>Intelligent Environmental Monitoring & Analysis System</p>
+        <br>
+        <span class="project-badge"> Active Project</span>
+    </header>
+
+     <!-- NAVIGATION  -->
+    <nav>
+        <a href="#overview">Overview</a>
+        <a href="#features">Features</a>
+        <a href="#team">Team</a>
+        <a href="#timeline">Timeline</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- MAIN CONTENT -->
+    <div class="container">
+
+        <!-- PROJECT OVERVIEW -->
+        <section class="project-overview" id="overview">
+            <h2> Project Overview</h2>
+            <p>
+                <strong>EcoTrack</strong> is an innovative environmental monitoring system designed to 
+                track air quality, water purity, and biodiversity in real-time. Using IoT sensors and 
+                AI-powered analytics, we provide actionable insights for communities, researchers, and 
+                policymakers to make data-driven environmental decisions.
+            </p>
+            <p>
+                Our mission is to democratize environmental data and empower local communities to 
+                protect their natural resources. The system is currently being piloted in three regions 
+                across Tanzania.
+            </p>
+            <p>
+                <strong> Key Objectives:</strong>
+            </p>
+            <ul style="margin-left: 25px; margin-top: 5px;">
+                <li>Monitor air quality (PM2.5, CO₂, NO₂) in urban areas</li>
+                <li>Test water quality in rivers and lakes</li>
+                <li>Track biodiversity through acoustic monitoring</li>
+            </ul>
+        </section>
+
+       <!-- FEATURES  -->
+        <section class="features-section" id="features">
+            <h2> Key Features</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon"></div>
+                    <h3>Air Quality Monitoring</h3>
+                    <p>Real-time sensors measure particulate matter, gases, and pollutants with 99% accuracy.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"></div>
+                    <h3>Water Quality Testing</h3>
+                    <p>Continuous monitoring of pH, turbidity, dissolved oxygen, and heavy metals in water bodies.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"></div>
+                    <h3>Biodiversity Tracking</h3>
+                    <p>AI-powered acoustic sensors identify bird and animal species, tracking population changes.</p>
+                </div>
+            </div>
+        </section>
+
+     <!-- TEAM  -->
+        <section class="team-section" id="team">
+            <h2>Project Team</h2>
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="avatar"><img src="Img.png" alt="" width="70px"></div>
+                    <h4>Ms. Marwah Antar</h4>
+                    <p class="role">Lead Software Developer</p>
+                </div>
+                <div class="team-member">
+                    <div class="avatar"><img src="Img.png" alt="" width="70px"></div>
+                    <h4>Mr. Mutasem Abdallah</h4>
+                    <p class="role">Project Lead & Environmental Scientist</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- TIMELINE  -->
+        <section class="timeline-section" id="timeline">
+            <h2>Project Timeline</h2>
+            <table class="timeline-table">
+                <thead>
+                    <tr>
+                        <th>Phase</th>
+                        <th>Activity</th>
+                        <th>Deadline</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Phase 1</td>
+                        <td>Research & Requirements Gathering</td>
+                        <td>Jan 2026</td>
+                        <td class="status-complete">Complete</td>
+                    </tr>
+                    <tr>
+                        <td>Phase 2</td>
+                        <td>Hardware Development & Sensor Testing</td>
+                        <td>Mar 2026</td>
+                        <td class="status-complete"> Complete</td>
+                    </tr>
+                    <tr>
+                        <td>Phase 3</td>
+                        <td>Software Development & Dashboard</td>
+                        <td>Jun-Jul 2026</td>
+                        <td class="status-progress"> In progress</td>
+                    </tr>
+                    <tr>
+                        <td>Phase 4</td>
+                        <td>Field Testing & Data Collection</td>
+                        <td>Aug 2026</td>
+                        <td class="status-pending"> Pending</td>
+                    </tr>
+                    <tr>
+                        <td>Phase 5</td>
+                        <td>Launch & Community Training</td>
+                        <td>Sep 2026</td>
+                        <td class="status-pending"> Pending</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+         <!-- CONTACT  -->
+        <section class="contact-section" id="contact">
+            <h2>Get In Touch</h2>
+            <p style="text-align: center; margin-bottom: 25px; color: #4a5568;">
+                Have questions or want to collaborate? Reach out to us!
+            </p>
+            <form class="contact-form">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" placeholder="Enter your full name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" placeholder="What's this about?">
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" placeholder="Write your message here..." required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </section>
+
+    </div>
+
+     <!-- FOOTER  -->
+    <footer>
+        <h3 style="color: white; margin-bottom: 10px;"> EcoTrack</h3>
+        <p style="margin-bottom: 15px;">Empowering communities through environmental intelligence</p>
+        <div class="footer-links">
+            <a href="#">About</a>
+            <a href="#">Blog</a>
+            <a href="#">Research</a>
+            <a href="#">Careers</a>
+            <a href="#">Privacy Policy</a>
+        </div>
+        <p class="copyright">
+            &copy; 2026 EcoTrack Project. Built with for a sustainable future.
+            <br>
+            <span style="font-size: 0.8rem; opacity: 0.6;">Part of the WebDev Training Program</span>
+        </p>
+    </footer>
+
+</body>
+</html>

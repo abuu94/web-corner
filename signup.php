@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en" class="h-100">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Field Training Portal</title>
+    <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet" />
+  </head>
+  <body class="d-flex flex-column h-100">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="index.php">Open Class</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarsExample06"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarsExample06">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" href="index.php">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.php">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.php">Contact</a>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                data-bs-toggle="dropdown"
+                >Resources</a
+              >
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Projects</a></li>
+                <li><a class="dropdown-item" href="#">Labs</a></li>
+                <li><a class="dropdown-item" href="#">Tutorials</a></li>
+                <li><a class="dropdown-item" href="#">Mentors</a></li>
+              </ul>
+            </li>
+          </ul>
+          <div class="d-flex gap-2">
+            <a href="signup.php" class="btn btn-outline-light btn-sm">Signup</a>
+            <a href="login.php" class="btn btn-light btn-sm">Login</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <div class="container mt-5">
+        <h2 class="mb-4">Signup</h2>
+        <form method="POST" class="card p-4 shadow-sm">
+          <div class="row mb-3">
+            <div class="col-md-6 themed-grid-col">
+              <label class="form-label">Username</label>
+              <input type="text" name="username" class="form-control" />
+            </div>
+            <div class="col-md-6 themed-grid-col">
+              <label class="form-label">Password</label>
+              <input type="password" name="password" class="form-control" />
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="col-md-6 themed-grid-col">
+              <label class="form-label">Email</label>
+              <input type="email" name="email" class="form-control" />
+            </div>
+            <div class="col-md-6 themed-grid-col">
+              <label class="form-label">Phonenumber</label>
+              <input type="number" name="phonenumber" class="form-control" />
+            </div>
+          </div>
+
+          <div class="row mb-3">
+            <div class="col-md-6 themed-grid-col">
+              <label class="form-label">Address</label>
+              <input type="text" name="address" class="form-control" />
+            </div>
+            <div class="col-md-6 themed-grid-col">
+              <label class="form-label">National ID</label>
+              <input type="text" name="national_id" class="form-control" />
+            </div>
+          </div>
+
+          <div class="row mb-3">
+            <div class="col-md-6 themed-grid-col">
+              <label class="form-label">Level</label>
+              <!-- <input type="text" name="address" class="form-control" /> -->
+              <select
+                class="form-select form-select-sm mb-3"
+                aria-label=".form-select-lg example"
+              >
+                <option selected>Open this select menu</option>
+                <option value="1">Certificate</option>
+                <option value="2">Diploma</option>
+                <option value="3">Degree</option>
+              </select>
+            </div>
+            <div class="col-md-6 themed-grid-col">
+              <label class="form-label">University</label>
+              <select
+                class="form-select form-select-sm mb-3"
+                aria-label=".form-select-lg example"
+              >
+                <option selected>Open this select menu</option>
+                <option value="1">Suza</option>
+                <option value="2">ZU</option>
+                <option value="3">Sumeit</option>
+              </select>
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-primary">Register</button>
+        </form>
+        <p class="mt-3">
+          Already have an account? <a href="login.php">Login here</a>
+        </p>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer mt-auto py-3 bg-dark text-light text-center">
+      <div class="container">
+        <span>&copy; 2026 Field Training Portal</span>
+      </div>
+    </footer>
+
+    <script src="assets/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script> -->
+  </body>
+</html>

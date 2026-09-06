@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Glow Beauty Salon</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#fff5f7;
+}
+
+header{
+    background:#d63384;
+    color:white;
+    text-align:center;
+    padding:30px;
+}
+
+header h1{
+    font-size:40px;
+}
+
+header p{
+    margin-top:10px;
+}
+
+nav{
+    background:#222;
+    text-align:center;
+    padding:15px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:20px;
+    font-weight:bold;
+}
+
+nav a:hover{
+    color:#ffb3d1;
+}
+
+.hero{
+    text-align:center;
+    padding:70px 20px;
+    background:white;
+}
+
+.hero h2{
+    font-size:38px;
+    color:#d63384;
+}
+
+.hero p{
+    margin:15px 0 25px;
+    color:#555;
+}
+
+.btn{
+    display:inline-block;
+    padding:12px 25px;
+    background:#d63384;
+    color:white;
+    text-decoration:none;
+    border-radius:30px;
+    transition:.3s;
+}
+
+.btn:hover{
+    background:#b82c72;
+}
+
+.services{
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    flex-wrap:wrap;
+    padding:40px;
+}
+
+.card{
+    width:280px;
+    background:white;
+    padding:25px;
+    border-radius:10px;
+    text-align:center;
+    box-shadow:0 5px 12px rgba(0,0,0,0.1);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.card h3{
+    color:#d63384;
+    margin-bottom:10px;
+}
+
+.booking{
+    width:60%;
+    margin:30px auto;
+    background:white;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 5px 12px rgba(0,0,0,0.1);
+}
+
+.booking h2{
+    text-align:center;
+    color:#d63384;
+    margin-bottom:20px;
+}
+
+.booking input,
+.booking select,
+.booking textarea{
+    width:100%;
+    padding:12px;
+    margin-bottom:15px;
+    border:1px solid #ccc;
+    border-radius:5px;
+}
+
+.booking input[type="submit"]{
+    background:#d63384;
+    color:white;
+    border:none;
+    cursor:pointer;
+    font-size:16px;
+}
+
+.booking input[type="submit"]:hover{
+    background:#b82c72;
+}
+
+footer{
+    margin-top:40px;
+    background:#222;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+@media(max-width:768px){
+    .booking{
+        width:90%;
+    }
+
+    nav a{
+        display:block;
+        margin:10px 0;
+    }
+
+    header h1{
+        font-size:30px;
+    }
+
+    .hero h2{
+        font-size:28px;
+    }
+}
+</style>
+
+</head>
+<body>
+
+<header>
+    <h1>Glow Beauty Salon</h1>
+    <p>Beauty • Style • Confidence</p>
+</header>
+
+<nav>
+    <a href="#">Home</a>
+    <a href="#">Services</a>
+    <a href="#">Gallery</a>
+    <a href="#">Pricing</a>
+    <a href="#">Contact</a>
+</nav>
+
+<section class="hero">
+    <h2>Look Beautiful Every Day</h2>
+    <p>Professional hair, makeup and beauty services for every occasion.</p>
+    <a href="#" class="btn">Book Appointment</a>
+</section>
+
+<section class="services">
+
+    <div class="card">
+        <h3>Hair Styling</h3>
+        <p>Modern hairstyles for ladies and gentlemen.</p>
+    </div>
+
+    <div class="card">
+        <h3>Makeup</h3>
+        <p>Professional makeup for weddings and events.</p>
+    </div>
+
+    <div class="card">
+        <h3>Facial Care</h3>
+        <p>Healthy skin treatments using quality products.</p>
+    </div>
+
+</section>
+
+<section class="booking">
+
+<h2>Book an Appointment</h2>
+
+<form>
+
+<input type="text" placeholder="Full Name">
+
+<input type="tel" placeholder="Phone Number">
+
+<select>
+<option>Select Service</option>
+<option>Hair Styling</option>
+<option>Makeup</option>
+<option>Facial Care</option>
+</select>
+
+<input type="date">
+
+<textarea rows="4" placeholder="Additional Notes"></textarea>
+
+<input type="submit" value="Book Now">
+
+</form>
+
+</section>
+
+<footer>
+<p>&copy; 2026 Glow Beauty Salon | All Rights Reserved</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alumni System Dashboard</title>
+  <style>
+    :root {
+      --bg: #f4f7fb;
+      --card: #ffffff;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --primary: #2563eb;
+      --primary-soft: #dbeafe;
+      --accent: #14b8a6;
+      --warning: #f59e0b;
+      --danger: #ef4444;
+      --shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #eef4ff 0%, var(--bg) 100%);
+      color: var(--text);
+    }
+
+    .dashboard {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 24px;
+    }
+
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 24px;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .topbar .actions {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      order: -1;
+      margin-right: auto;
+    }
+
+    .title h1 {
+      margin: 0;
+      font-size: 28px;
+    }
+
+    .title p {
+      margin: 4px 0 0;
+      color: var(--muted);
+    }
+
+    .chip, .btn {
+      padding: 10px 14px;
+      border-radius: 999px;
+      border: none;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .chip {
+      background: var(--primary-soft);
+      color: var(--primary);
+    }
+
+    .btn {
+      background: var(--primary);
+      color: #fff;
+      transition: all 0.2s ease;
+    }
+
+    .btn.active {
+      background: #1d4ed8;
+      transform: translateY(-1px);
+      box-shadow: 0 8px 20px rgba(37, 99, 235, 0.25);
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin-bottom: 20px;
+    }
+
+    .card {
+      background: var(--card);
+      border-radius: 18px;
+      padding: 18px;
+      box-shadow: var(--shadow);
+    }
+
+    .stat {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .stat-icon {
+      width: 46px;
+      height: 46px;
+      border-radius: 12px;
+      display: grid;
+      place-items: center;
+      font-size: 22px;
+    }
+
+    .blue { background: #dbeafe; color: var(--primary); }
+    .teal { background: #ccfbf1; color: var(--accent); }
+    .orange { background: #fef3c7; color: var(--warning); }
+    .red { background: #fee2e2; color: var(--danger); }
+
+    .stat h3 { margin: 0; font-size: 24px; }
+    .stat p { margin: 4px 0 0; color: var(--muted); font-size: 14px; }
+
+    .content-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 20px;
+    }
+
+    .section-title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 12px;
+    }
+
+    .section-title h2 {
+      margin: 0;
+      font-size: 18px;
+    }
+
+    .tiny {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .table-wrap {
+      overflow-x: auto;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      text-align: left;
+      padding: 12px 10px;
+      border-bottom: 1px solid #e5e7eb;
+      font-size: 14px;
+    }
+
+    th { color: var(--muted); font-weight: 600; }
+
+    .pill {
+      display: inline-block;
+      padding: 6px 10px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .active { background: #dcfce7; color: #166534; }
+    .mentor { background: #ede9fe; color: #6d28d9; }
+    .job { background: #dbeafe; color: #1d4ed8; }
+
+    .right-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .progress-list { display: flex; flex-direction: column; gap: 12px; }
+    .progress-item p { margin: 0 0 6px; font-size: 14px; }
+    .bar {
+      height: 8px;
+      border-radius: 999px;
+      background: #e5e7eb;
+      overflow: hidden;
+    }
+    .bar span {
+      display: block;
+      height: 100%;
+      background: linear-gradient(90deg, var(--primary), var(--accent));
+      border-radius: inherit;
+    }
+
+    .event-list { display: flex; flex-direction: column; gap: 10px; }
+    .event {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 0;
+      border-bottom: 1px solid #f1f5f9;
+    }
+    .event:last-child { border-bottom: none; }
+
+    .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--accent);
+      flex-shrink: 0;
+    }
+
+    @media (max-width: 1000px) {
+      .stats-grid { grid-template-columns: repeat(2, 1fr); }
+      .content-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 600px) {
+      .stats-grid { grid-template-columns: 1fr; }
+      .dashboard { padding: 16px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="dashboard">
+    <header class="topbar">
+      <div class="title">
+        <h1>Alumni System Dashboard</h1>
+        <p>Overview of alumni engagement, careers, and events</p>
+      </div>
+      <div class="actions">
+        <span class="chip">Updated Today</span>
+        <button id="newAlumniBtn" class="btn">+ New Alumni</button>
+      </div>
+    </header>
+
+    <section class="stats-grid">
+      <div class="card stat">
+        <div>
+          <h3>1,240</h3>
+          <p>Total Alumni</p>
+        </div>
+        <div class="stat-icon blue">🎓</div>
+      </div>
+      <div class="card stat">
+        <div>
+          <h3>318</h3>
+          <p>Active Members</p>
+        </div>
+        <div class="stat-icon teal">🤝</div>
+      </div>
+      <div class="card stat">
+        <div>
+          <h3>86%</h3>
+          <p>Placement Rate</p>
+        </div>
+        <div class="stat-icon orange">💼</div>
+      </div>
+      <div class="card stat">
+        <div>
+          <h3>24</h3>
+          <p>Events This Month</p>
+        </div>
+        <div class="stat-icon red">📅</div>
+      </div>
+    </section>
+
+    <section class="content-grid">
+      <div class="card">
+        <div class="section-title">
+          <h2>Recent Alumni Activity</h2>
+          <span class="tiny">Last 6 updates</span>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Role</th>
+                <th>Status</th>
+                <th>Department</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Aisha M.</td>
+                <td>Software Engineer</td>
+                <td><span class="pill active">Active</span></td>
+                <td>Computer Science</td>
+              </tr>
+              <tr>
+                <td>Juma K.</td>
+                <td>Data Analyst</td>
+                <td><span class="pill mentor">Mentor</span></td>
+                <td>Statistics</td>
+              </tr>
+              <tr>
+                <td>Nadia S.</td>
+                <td>Product Manager</td>
+                <td><span class="pill job">Employed</span></td>
+                <td>Business</td>
+              </tr>
+              <tr>
+                <td>Salim B.</td>
+                <td>Research Assistant</td>
+                <td><span class="pill active">Active</span></td>
+                <td>Engineering</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="right-stack">
+        <div class="card">
+          <div class="section-title">
+            <h2>Engagement Goals</h2>
+            <span class="tiny">Quarterly progress</span>
+          </div>
+          <div class="progress-list">
+            <div class="progress-item">
+              <p>Mentorship Sessions 78%</p>
+              <div class="bar"><span style="width: 78%"></span></div>
+            </div>
+            <div class="progress-item">
+              <p>Career Support 91%</p>
+              <div class="bar"><span style="width: 91%"></span></div>
+            </div>
+            <div class="progress-item">
+              <p>Event Attendance 64%</p>
+              <div class="bar"><span style="width: 64%"></span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="section-title">
+            <h2>Upcoming Events</h2>
+            <span class="tiny">Next 3 activities</span>
+          </div>
+          <div class="event-list">
+            <div class="event">
+              <span class="dot"></span>
+              <div>
+                <strong>Networking Night</strong><br>
+                <span class="tiny">July 5 • 6:00 PM</span>
+              </div>
+            </div>
+            <div class="event">
+              <span class="dot"></span>
+              <div>
+                <strong>Career Talk</strong><br>
+                <span class="tiny">July 12 • 2:00 PM</span>
+              </div>
+            </div>
+            <div class="event">
+              <span class="dot"></span>
+              <div>
+                <strong>Alumni Meetup</strong><br>
+                <span class="tiny">July 20 • 4:30 PM</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    const alumniBtn = document.getElementById('newAlumniBtn');
+
+    if (alumniBtn) {
+      alumniBtn.addEventListener('click', () => {
+        alumniBtn.classList.toggle('active');
+        alumniBtn.textContent = alumniBtn.classList.contains('active')
+          ? '✓ Active'
+          : '+ New Alumni';
+      });
+    }
+  </script>
+</body>
+</html>

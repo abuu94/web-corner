@@ -3,9 +3,17 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Open Class - Field Training Portal</title>
+    <title>Field Training Portal</title>
     <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link href="assets/dist/css/blog.css" rel="stylesheet" />
+    <style>
+      .about-image {
+        border-radius: 20px;
+        border: 4px solid #0d6efd;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        object-fit: cover;
+      }
+    </style>
   </head>
   <body class="d-flex flex-column h-100">
     <!-- Navbar -->
@@ -31,6 +39,7 @@
             <li class="nav-item">
               <a class="nav-link" href="contact.php">Contact</a>
             </li>
+
             <li class="nav-item dropdown">
               <a
                 class="nav-link dropdown-toggle"
@@ -54,64 +63,40 @@
       </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- Main Content -->
     <main class="flex-shrink-0">
-      <div class="container mt-4">
-        <div class="p-5 mb-4 bg-dark text-white rounded shadow">
-          <h1 class="display-4 fw-bold">Welcome to Open Class</h1>
-          <p class="lead">
-            A learning portal designed to introduce new Field students to
-            <strong>Open Source Technologies</strong>. Here you will explore
-            Linux, Git, Docker, Python, and other essential tools for modern
-            software development.
-          </p>
-          <p>
-            <a href="about.html" class="btn btn-primary btn-lg">Learn More</a>
-            <a href="signup.html" class="btn btn-outline-light btn-lg"
-              >Get Started</a
-            >
-          </p>
+      <div class="container mt-5">
+        <div class="alert alert-info d-flex align-items-center" role="alert">
+          <strong>About Us</strong>
         </div>
 
-        <!-- Feature Cards -->
-        <div class="row mb-4">
-          <div class="col-md-4">
-            <div class="card shadow-sm">
-              <div class="card-body">
-                <h5 class="card-title text-primary">Open Source Basics</h5>
-                <p class="card-text">
-                  Understand the philosophy of open source and how it empowers
-                  innovation.
-                </p>
-                <a href="#" class="btn btn-sm btn-outline-primary">Explore</a>
-              </div>
-            </div>
+        <div class="row align-items-center">
+          <!-- Image -->
+          <div class="col-md-6 mb-4 mb-md-0 text-center">
+            <img
+              src="assets/images/egazfield-student.png"
+              alt="Students learning coding together"
+              class="img-fluid about-image"
+            />
           </div>
-          <div class="col-md-4">
-            <div class="card shadow-sm">
-              <div class="card-body">
-                <h5 class="card-title text-success">Hands-on Labs</h5>
-                <p class="card-text">
-                  Practice with real tools like Git, Docker, and Linux in guided
-                  labs.
-                </p>
-                <a href="#" class="btn btn-sm btn-outline-success">Start Lab</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card shadow-sm">
-              <div class="card-body">
-                <h5 class="card-title text-warning">Mentorship</h5>
-                <p class="card-text">
-                  Learn from experienced mentors who guide you through your
-                  field training journey.
-                </p>
-                <a href="#" class="btn btn-sm btn-outline-warning"
-                  >Meet Mentors</a
-                >
-              </div>
-            </div>
+
+          <!-- Text -->
+          <div class="col-md-6">
+            <h3 class="text-primary">Learning Together</h3>
+            <p>
+              At <strong>Open Class</strong>, tunajifunza kwa pamoja mambo
+              mbalimbali kuhusu teknolojia. Tunaamini kuwa njia bora ya
+              kujifunza ni kushirikiana, kushirikishana maarifa, na kutatua
+              changamoto kwa pamoja.
+            </p>
+
+            <h3 class="text-success mt-4">Students & Teachers</h3>
+            <p>
+              Sote ni wanafunzi na sote ni walimu. Kila mmoja wetu anajifunza na
+              pia anafundisha. Kutoka misingi ya programming hadi ujuzi wa juu
+              wa teknolojia, tunasaidiana ili kufanikisha safari ya kuwa
+              wabobezi wa teknolojia.
+            </p>
           </div>
         </div>
       </div>
@@ -120,10 +105,12 @@
     <!-- Footer -->
     <footer class="footer mt-auto py-3 bg-dark text-light text-center">
       <div class="container">
-        <span>&copy; 2026 Open Class - Field Training Portal</span>
+        <span>&copy; 2026 Field Training Portal</span>
       </div>
     </footer>
 
     <script src="assets/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script> -->
   </body>
 </html>
