@@ -16,8 +16,11 @@
       href="https://getbootstrap.com/docs/5.0/examples/dashboard/"
     />
 
+               <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+
     <!-- Bootstrap core CSS -->
-    <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet" />
 
     <style>
       .bd-placeholder-img {
@@ -36,8 +39,8 @@
     </style>
 
     <!-- Custom styles for this template -->
-    <link href="assets/dist/css/dashboard.css" rel="stylesheet" />
-    <link href="assets/dist/css/features.css" rel="stylesheet" />
+    <link href="https://github.com/abuu94/web-corner/blob/main/assets/dist/css/dashboard.css" rel="stylesheet" />
+    <link href="https://github.com/abuu94/web-corner/blob/main/assets/dist/css/features.css" rel="stylesheet" />
   </head>
   <body>
     <header
@@ -46,11 +49,9 @@
       <span class="col-md-3 col-lg-2 me-0 px-3"> Open Class Portal</span>
 
       <div class="d-flex gap-4">
-        <a href="login.html" class="btn btn-outline-warning btn-sm">Sign Out</a>
+        <a href="login.php" class="btn btn-outline-warning btn-sm">Sign Out</a>
         <p></p>
 
-        <!-- <span class="btn btn-outline-light btn-sm"> SignOut</span> -->
-        <!-- <span class="col-md-3 col-lg-2 me-0 px-3"> SignOut</span> -->
       </div>
     </header>
 
@@ -94,7 +95,7 @@
                   Students
                 </a>
               </li>
-              <li class="nav-item">
+              <!-- <li class="nav-item">
                 <a
                   class="nav-link"
                   data-bs-toggle="tab"
@@ -104,7 +105,7 @@
 
                   Resources</a
                 >
-              </li>
+              </li> -->
             </ul>
           </div>
         </nav>
@@ -794,7 +795,7 @@
                 </div>
               </div>
             </div>
-            <div class="tab-pane fade" id="resources">
+            <!-- <div class="tab-pane fade" id="resources">
               <div class="container px-4 py-5" id="custom-cards">
                 <h2 class="pb-2 border-bottom">Subjects and Resources</h2>
 
@@ -922,7 +923,7 @@
                   </div>
                 </div>
               </div>
-            </div>
+            </div> -->
           </div>
         </main>
       </div>
@@ -933,7 +934,10 @@
       <span>&copy; 2026 Open Class Portal</span>
     </footer>
 
-    <script src="assets/dist/js/bootstrap.bundle.min.js"></script>
+
+          <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
     <script
       src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js"
       integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE"
@@ -944,6 +948,6 @@
       integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha"
       crossorigin="anonymous"
     ></script>
-    <script src="assets/dist/js/dashboard.js"></script>
+    <script src="https://raw.githubusercontent.com/abuu94/web-corner/refs/heads/main/assets/dist/js/dashboard.js"></script>
   </body>
 </html>
